@@ -16,3 +16,9 @@ $ wget https://github.com/linuxserver/docker-docker-compose/releases/download/1.
 $ mv docker-compose-arm64 docker-compose
 $ sudo apt-get install -y docker-compose
 ```
+- Nginx Proxy Manager 설치
+  - SSL 인증서를 간단하게 받을 수 있다.
+  - `https://nginx.{DNS주소}`로 접근
+- Portainer 설치
+  - Docker Web GUI
+  - `https://portainer.{DNS주소}`로 접근
