@@ -27,4 +27,5 @@ $ sudo apt-get install -y docker-compose
 - 진행중... (Github 프로젝트를 도커에 올리고 Jenkins와 Github SSH 통신 설정해야함.)
 > 참고자료: 
 > [[Docker] Jenkins 구축](https://dev-play.tistory.com/entry/Docker-Jenkins-%EA%B5%AC%EC%B6%95) | 
-[SpringBoot Jenkins 배포 자동화](https://heekng.tistory.com/139)
+[SpringBoot Jenkins 배포 자동화](https://heekng.tistory.com/139) | 
+[Jenkins를 사용한 클라우드 배포에 대한 CI/CD 파이프라인 설정](https://docs.oracle.com/ko/solutions/cicd-pipeline/index.html#GUID-D5231DA5-98CB-4690-B15F-656181B0080C)
