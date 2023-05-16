@@ -22,3 +22,9 @@ $ sudo apt-get install -y docker-compose
 - Portainer 설치
   - Docker Web GUI
   - `https://portainer.{DNS주소}`로 접근
+### 4. Jenkins 설치
+- Jenkins 도커 이미지 생성
+- 진행중... (Github 프로젝트를 도커에 올리고 Jenkins와 Github SSH 통신 설정해야함.)
+> 참고자료: 
+> [[Docker] Jenkins 구축](https://dev-play.tistory.com/entry/Docker-Jenkins-%EA%B5%AC%EC%B6%95) | 
+[SpringBoot Jenkins 배포 자동화](https://heekng.tistory.com/139)
