@@ -24,8 +24,9 @@ $ sudo apt-get install -y docker-compose
   - `https://portainer.{DNS주소}`로 접근
 ### 4. Jenkins 설치
 - Jenkins 도커 이미지 생성
-- 진행중... (Github 프로젝트를 도커에 올리고 Jenkins와 Github SSH 통신 설정해야함.)
+- Github 프로젝트의 deploy/backend 브랜치와 Jenkins 연동 (진행중...)
 > 참고자료: 
+> [젠킨스와 깃허브 연동하기](https://yermi.tistory.com/entry/Jenkins-%EC%A0%A0%ED%82%A8%EC%8A%A4Jenkins%EC%99%80-%EA%B9%83%ED%97%88%EB%B8%8CGithub-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0-Github%EC%97%90-%EC%98%AC%EB%A6%B0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Jenkins%EB%A1%9C-build%ED%95%98%EA%B8%B0) | 
 > [[Docker] Jenkins 구축](https://dev-play.tistory.com/entry/Docker-Jenkins-%EA%B5%AC%EC%B6%95) | 
 [SpringBoot Jenkins 배포 자동화](https://heekng.tistory.com/139) | 
 [Jenkins를 사용한 클라우드 배포에 대한 CI/CD 파이프라인 설정](https://docs.oracle.com/ko/solutions/cicd-pipeline/index.html#GUID-D5231DA5-98CB-4690-B15F-656181B0080C)
