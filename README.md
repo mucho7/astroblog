@@ -149,5 +149,5 @@ $ sudo apt-get install -y docker-compose
   - 서버마다 젠킨스 아이템을 생성하고, 배포 브랜치에 빌드할 이미지에 해당하는 Dockerfile을 배치시키면 서버 별로 컨테이너 생성 가능.
 
 ### 5. Nginx 설치
-
+> 참고자료: https://phsun102.tistory.com/45
 - (진행중..)
