@@ -152,3 +152,6 @@ $ sudo apt-get install -y docker-compose
 > 참고자료: https://phsun102.tistory.com/45
 - NPM custom location 설정하기
   - [How do i forward to a folder?](https://github.com/NginxProxyManager/nginx-proxy-manager/issues/104) 참고
+  - npm 컨테이너 내부 `/data/nginx/proxy_host` 디렉토리에 conf 파일들이 프록시 서버별로 저장됨.
+
+ 
