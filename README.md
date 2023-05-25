@@ -39,9 +39,7 @@ $ sudo apt-get install -y docker-compose
 
 ### 4. Jenkins 설치
 
-#### 1) Docker in Docker
-
-> 참고자료: [[Docker] 도커 안에 젠킨스 설치 (도커 인 도커, Docker In Docker, D in D)](https://narup.tistory.com/228)
+#### 1) Docker out of Docker
 
 - `~/docker/` 디렉토리에 `/jenkins` 디렉토리 생성
 
