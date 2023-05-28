@@ -11,4 +11,4 @@ def read_root():
     response = RedirectResponse(url=url)
     return response
 
-app.include_router(api_router, prefix="/v1")
+app.include_router(api_router, prefix="/api/v1")
