@@ -146,10 +146,16 @@ $ sudo apt-get install -y docker-compose
 
   - 서버마다 젠킨스 아이템을 생성하고, 배포 브랜치에 빌드할 이미지에 해당하는 Dockerfile을 배치시키면 서버 별로 컨테이너 생성 가능.
 
-### 5. Nginx 설정
+### 5. Nginx 설정 (nginx-proxy-manager 활용)
 > 참고자료: https://phsun102.tistory.com/45
 - NPM custom location 설정하기
   - [How do i forward to a folder?](https://github.com/NginxProxyManager/nginx-proxy-manager/issues/104) 참고
-  - npm 컨테이너 내부 `/data/nginx/proxy_host` 디렉토리에 conf 파일들이 프록시 서버별로 저장됨.
+  - NPM의 웹GUI에서 프록시 호스트를 설정하면 컨테이너 내부 `/data/nginx/proxy_host` 디렉토리에 conf 파일들이 프록시 서버별로 저장됨. 웹GUI에서 수정하면 자동으로 conf 파일이 수정됨.
+- {도메인 이름}의 프록시 호스트를 frontimg 컨테이너의 포트로 연결시킴
+- Custom locations 탭에서 다음과 같이 설정
+  - location: `/`, Scheme: `http`, Forward Hostname/IP: `frontimg` (frontend docker container 이름으로 설정), Forward Port: `3000` (frontend docker container 포트번호)
+  - location: `/api/`, Scheme: `http`, Forward Hostname/IP: `backimg` (backend docker container 이름으로 설정), Forward Port: `8000` (backend docker container 포트번호)
+- {도메인 이름}/api/ 형태의 url 요청은 8000 포트로 연결되어 백엔드 컨테이너로 요청을 보낼 수 있다. 
+- front와 back 서버 요청 분기를 위한 리버스 프록시 역할을 위해 NPM 이외에 별도로 nginx 컨테이너를 띄우는 방식도 고려했으나 NPM의 Custom locations 옵션으로 구현할 수 있었음.
 
  
