@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import shark from './assets/shark_fin.png';
 import './App.css';
 
 function App() {
@@ -20,7 +21,10 @@ function App() {
     //   </header>
     // </div>
     <>
-      <h>Hi there {`\u{1F60A}`}</h>
+    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <img src={shark} alt='shark' style={{height: '200px', width: '200px'}}/>
+      <p style={{fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center', fontFamily: 'UhBeeBEOJJI', margin: '0'}}>상어 밥 주는중...🐟</p>
+    </div>
     </>
   );
 }
