@@ -45,7 +45,7 @@ function App() {
           style={{
             backgroundColor: "#fafafa",
             width: "100%",
-            boxShadow: "0 1px 2px 0 rgba(0,0,0,.15)",
+            boxShadow: "0 1px 2px 0 rgba(0,0,0,.15), 0 -1px 2px 0 rgba(0,0,0,.15)",
             padding: "2rem",
           }}
         >
