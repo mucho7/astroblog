@@ -1,15 +1,23 @@
+import { useState } from "react";
 import shark from "./assets/shark.png";
 import "./App.css";
+import SendRequest from "./components/SendRequest";
 
 import React from "react";
 import styled from "styled-components";
 import { FiGithub } from "react-icons/fi";
+import { SiFastapi } from "react-icons/si";
 
 function App() {
   return (
     <>
       <FlexContainerCol>
-        <img className="App-logo" src={shark} alt="shark" style={{margin: '5rem'}}/>
+        <img
+          className="App-logo"
+          src={shark}
+          alt="shark"
+          style={{ margin: "5rem" }}
+        />
         <FlexItem>
           <Typo>상어 밥 주는중...🐟</Typo>
         </FlexItem>
@@ -29,8 +37,22 @@ function App() {
             밥 주는 사람:{" "}
             <a className="App-link" href="https://github.com/kimsj-git">
               김서정
+              <FiGithub style={{ fontSize: "1.5rem", marginLeft: "5px" }} />
             </a>
           </Typo>
+        </FlexItem>
+        <FlexItem
+          style={{
+            backgroundColor: "#fafafa",
+            width: "100%",
+            boxShadow: "0 1px 2px 0 rgba(0,0,0,.15)",
+            padding: "2rem",
+          }}
+        >
+          <FlexContainerCol>
+            <SiFastapi size={50} color="#009485" />
+            <SendRequest />
+          </FlexContainerCol>
         </FlexItem>
       </FlexContainerCol>
     </>
