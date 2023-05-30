@@ -1,32 +1,65 @@
-import logo from './logo.svg';
-import shark from './assets/shark_fin.png';
-import './App.css';
+import shark from "./assets/shark_fin.png";
+import "./App.css";
+
+import React from "react";
+import styled from "styled-components";
+import { FiGithub } from "react-icons/fi";
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
     <>
-    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <img src={shark} alt='shark' style={{height: '200px', width: '200px'}}/>
-      <p style={{fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center', fontFamily: 'UhBeeBEOJJI', margin: '0'}}>상어 밥 주는중...🐟</p>
-    </div>
+      <FlexContainerCol>
+        <img className="App-logo" src={shark} alt="shark" />
+        <FlexItem>
+          <Typo>상어 밥 주는중...🐟</Typo>
+        </FlexItem>
+        <FlexItem>
+          <a
+            className="App-link"
+            href="https://github.com/kimsj-git/oracle-cloud-server"
+          >
+            <FlexContainerRow>
+              <Typo>Project Github</Typo>
+              <FiGithub style={{ fontSize: "2rem", marginLeft: "5px" }} />
+            </FlexContainerRow>
+          </a>
+        </FlexItem>
+        <FlexItem>
+          <Typo>
+            밥 주는 사람:{" "}
+            <a className="App-link" href="https://github.com/kimsj-git">
+              김서정
+            </a>
+          </Typo>
+        </FlexItem>
+      </FlexContainerCol>
     </>
   );
 }
+
+const FlexContainerCol = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const FlexContainerRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+const FlexItem = styled.div`
+  margin: 1rem 0 1rem 0;
+`;
+
+const Typo = styled.p`
+  font-family: UhBeeBEOJJI;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+`;
 
 export default App;
