@@ -1,4 +1,4 @@
-import shark from "./assets/shark_fin.png";
+import shark from "./assets/shark.png";
 import "./App.css";
 
 import React from "react";
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <FlexContainerCol>
-        <img className="App-logo" src={shark} alt="shark" />
+        <img className="App-logo" src={shark} alt="shark" style={{margin: '5rem'}}/>
         <FlexItem>
           <Typo>상어 밥 주는중...🐟</Typo>
         </FlexItem>
