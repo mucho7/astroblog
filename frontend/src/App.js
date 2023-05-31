@@ -17,7 +17,7 @@ function App() {
           className="App-logo"
           src={shark}
           alt="shark"
-          style={{ margin: "5rem" }}
+          style={{ margin: "2rem" }}
         />
         <FlexItem>
           <Typo>상어 밥 주는중...🐟</Typo>
