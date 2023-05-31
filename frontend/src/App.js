@@ -1,6 +1,7 @@
 import { useState } from "react";
 import shark from "./assets/shark.png";
 import "./App.css";
+import Layout from "./layout/Layout";
 import SendRequest from "./components/SendRequest";
 
 import React from "react";
@@ -10,7 +11,7 @@ import { SiFastapi } from "react-icons/si";
 
 function App() {
   return (
-    <>
+    <Layout>
       <FlexContainerCol>
         <img
           className="App-logo"
@@ -55,7 +56,7 @@ function App() {
           </FlexContainerCol>
         </FlexItem>
       </FlexContainerCol>
-    </>
+    </Layout>
   );
 }
 
