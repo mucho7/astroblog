@@ -3,7 +3,7 @@ import { lighten } from "polished";
 
 const Header = () => {
 	const inProgress = () => {
-		alert("준비 중입니다. \u{1F30A}\u{1F30A}\u{26F5}")
+		alert("준비 중입니다. \u{1F30A}\u{1F30A}")
 	}
 
   return (
