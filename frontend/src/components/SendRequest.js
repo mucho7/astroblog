@@ -3,6 +3,8 @@ import { darken, lighten } from 'polished'
 
 const SendRequest = () => {
   const handleRequest = async (event) => {
+		const startTime = performance.now()
+		
 		try {
 			const response = await fetch("https://kimsj.dev/api/v1/hello", {
 				method: "GET"
@@ -10,7 +12,11 @@ const SendRequest = () => {
 			if (response.ok) {
 				console.log('GET request successful.')
 				const data = await response.json()
+
+				const endTime = performance.now()
+				const responseTime = endTime - startTime
 				console.log(data.msg)
+				console.log("API Response Time:", responseTime, "ms")
 			} else {
 				console.error('GET request failed.')
 			}
