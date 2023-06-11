@@ -4,20 +4,46 @@ import SendRequest from "../components/SendRequest"
 import shark from "../assets/shark.png"
 
 import styled from "styled-components"
+import { darken, lighten } from 'polished'
 import { FiGithub } from "react-icons/fi"
 import { SiFastapi } from "react-icons/si"
 
 const MainPage = () => {
+  const linkToResume = () => {
+    window.location.href = "/resume.pdf"
+  }
+  const linkToGithub = () => {
+    window.location.href = "https://github.com/kimsj-git"
+  }
+
   return (
     <Layout>
       <FlexContainerCol>
-        <img
-          className="App-logo"
-          src={shark}
-          alt="shark"
-          style={{ margin: "2rem" }}
-        />
+        <FlexContainerRow>
+          <img
+            className="App-logo"
+            src={shark}
+            alt="shark"
+            style={{ margin: "2rem" }}
+          />
+          <FlexContainerCol>
+            <Typo>🐟 🐟 🐟</Typo>
+            <Typo>안녕하세요</Typo>
+            <Typo>웹 개발자 김서정입니다.</Typo>
+          </FlexContainerCol>
+        </FlexContainerRow>
+        <FlexContainerCol style={{ width: "80%", alignItems: 'start'}}>
+          <TypoAboutMe style={{fontWeight: 'bold'}}>About Me</TypoAboutMe>
+          <TypoAboutMe>- 코드 실행 도중 에러를 마주하면? 배울게 하나 늘어서 오히려 좋아요.</TypoAboutMe>
+          <TypoAboutMe>- 이게 왜 안됨? 이건 왜 됨?? 실행되면 끝이 아니라 동작 원리를 알고싶어요.</TypoAboutMe>
+          <TypoAboutMe>- 이 기술을 써야하는 이유는? 아무리 좋은 기술 스택이라도 우리 프로젝트에 적용할땐 이유가 필요해요.</TypoAboutMe>
+          <TypoAboutMe>주니어 개발자로 아직 부족한 점이 많지만, 부족하다는 사실이 저를 불안하게 하지 않고 그만큼 배울 것이 많다고 생각되어 즐겁습니다. 이 즐거움이 제가 개발을 지속할 수 있는 원동력이라고 생각합니다.</TypoAboutMe>
+        </FlexContainerCol>
         <FlexItem>
+          <ColorButton onClick={linkToResume} bgColor="#61affe">Resume</ColorButton>
+          <ColorButton onClick={linkToGithub} bgColor="#49cc90">Github</ColorButton>
+        </FlexItem>
+        {/* <FlexItem>
           <Typo>상어 밥 주는중...🐟</Typo>
         </FlexItem>
         <FlexItem>
@@ -53,7 +79,7 @@ const MainPage = () => {
             <SiFastapi size={50} color="#009485" />
             <SendRequest />
           </FlexContainerCol>
-        </FlexItem>
+        </FlexItem> */}
       </FlexContainerCol>
     </Layout>
   )
@@ -83,5 +109,33 @@ const Typo = styled.p`
   font-weight: bold;
   margin: 0;
 `
+
+const TypoAboutMe = styled.p`
+  font-family: Pretendard-Regular;
+  font-size: 1rem;
+  margin: 5px 0 5px 0;
+`
+
+const ColorButton = styled.button`
+	background-color: ${props => props.bgColor};
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 5px;
+	width: 7rem;
+
+	&:hover {
+		background-color: ${props => darken(0.1, props.bgColor)};
+	}
+
+	text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+	font-family: UhBeeBEOJJI;
+`
+
 
 export default MainPage
