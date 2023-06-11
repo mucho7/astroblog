@@ -29,27 +29,28 @@ const Header = () => {
   return (
     <header>
       <HeaderContainer>
-        <FlexItem>
+        <FlexItem style={{ display: "flex", alignItems: "center" }}>
           <img
             src={terminal_icon}
             alt="shark"
-            style={{ height: "2.5rem", cursor: "pointer"}}
-            onClick={() => {handleNav("/")}}
+            style={{ height: "2.5rem", cursor: "pointer", marginRight: "1rem" }}
+            onClick={() => { handleNav("/") }}
           />
+          <NavItemTypo>KIMSJ's Portfolio</NavItemTypo>
         </FlexItem>
-          <FlexItem>
+        {/* <FlexItem>
             <NavItemTypo onClick={inProgress}>ABOUT</NavItemTypo>
           </FlexItem>
           <FlexItem>
             <NavItemTypo onClick={() => handleNav("/project/")}>
               PROJECT
             </NavItemTypo>
-          </FlexItem>
-          <FlexItem>
+          </FlexItem> */}
+        {/* <FlexItem>
             <CustomLink href="https://github.com/kimsj-git">
               <NavItemTypo>GITHUB</NavItemTypo>
             </CustomLink>
-          </FlexItem>
+          </FlexItem> */}
       </HeaderContainer>
     </header>
   )
@@ -76,8 +77,8 @@ const FlexItem = styled.div`
 `
 
 const NavItemTypo = styled.p`
-  font-family: UhBeeSkyrain;
-  font-size: 20px;
+  font-family: UhBeeZZIBA-Regular;
+  font-size: 22px;
   color: #24292f;
   // margin: 1rem;
   cursor: pointer;

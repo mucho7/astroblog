@@ -20,7 +20,7 @@ const Footer = () => {
             </a>
           </FlexIcon>
         </FlexContainerRow>
-        <Typo>© 2023 Project Shark in the sea of Internet</Typo>
+        <Typo>© 2023. Kim Suhjeong. All rights reserved.</Typo>
       </FooterContainer>
     </footer>
   );
