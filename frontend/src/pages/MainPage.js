@@ -2,6 +2,7 @@ import Layout from "../layout/Layout"
 import SendRequest from "../components/SendRequest"
 
 import shark from "../assets/shark.png"
+import profile_img from "../assets/profile_img.jpg"
 
 import styled from "styled-components"
 import { darken, lighten } from 'polished'
@@ -18,16 +19,19 @@ const MainPage = () => {
 
   return (
     <Layout>
-      <FlexContainerCol>
-        <FlexContainerRow>
+      <FlexContainerCol style={{minHeight: "70vh"}}>
+        <FlexContainerRow style={{width: "60%"}}>
+          <FlexItem style={{margin: "0.5rem"}}>
+          <img src={profile_img} style={{height: '14rem', borderRadius: '50%'}}/>
+          </FlexItem>
+          <FlexContainerCol style={{margin: '0.5rem'}}>
           <img
             className="App-logo"
             src={shark}
             alt="shark"
-            style={{ margin: "2rem" }}
+            style={{ margin: "1rem", height: '5rem' }}
           />
-          <FlexContainerCol>
-            <Typo>🐟 🐟 🐟</Typo>
+            {/* <Typo>🐟 🐟 🐟</Typo> */}
             <Typo>안녕하세요</Typo>
             <Typo>웹 개발자 김서정입니다.</Typo>
           </FlexContainerCol>
@@ -88,7 +92,7 @@ const MainPage = () => {
 const FlexContainerCol = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 `
 
