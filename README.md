@@ -1,4 +1,4 @@
-# oracle-cloud-server
+# Full-stack Portfolio Website
 
 Oracle Cloud 서버에서 Frontend(React.js), Backend(FastAPI), CI/CD(Jenkins + Github Webhook) 환경을 구축하여 개인 포트폴리오 웹사이트를 만드는 1인 프로젝트입니다.
 
