@@ -38,8 +38,8 @@ const MainPage = () => {
             <Typo>웹 개발자 김서정입니다.</Typo>
           </FlexContainerCol>
         </FlexContainerRow>
-        <FlexContainerCol style={{ width: "80%", alignItems: 'start'}}>
-          <TypoAboutMe style={{fontWeight: 'bold'}}>About Me</TypoAboutMe>
+        <FlexContainerCol style={{ width: "80%", alignItems: 'start', margin: '2rem 0 1rem 0'}}>
+          <TypoAboutMe style={{fontWeight: 'bold', fontSize: '1.5rem'}}>About Me</TypoAboutMe>
           <TypoAboutMe>💡 코드 실행 도중 에러를 마주하면? 배울게 하나 늘어서 오히려 좋아요.</TypoAboutMe>
           <TypoAboutMe>💡 이게 왜 안됨? 이건 왜 됨?? 실행되면 끝이 아니라 동작 원리를 알고싶어요.</TypoAboutMe>
           <TypoAboutMe>💡 이 기술을 써야하는 이유는? 아무리 좋은 기술 스택이라도 우리 프로젝트에 적용할땐 이유가 필요해요.</TypoAboutMe>
@@ -76,7 +76,6 @@ const FlexItem = styled.div`
 const Typo = styled.p`
   font-family: Gowun Dodum;
   font-size: 1.5rem;
-  // font-weight: bold;
   word-break: keep-all;
   text-align: center;
   margin: 0;
@@ -85,6 +84,8 @@ const Typo = styled.p`
 const TypoAboutMe = styled.p`
   font-family: Gowun Dodum;
   font-size: 18px;
+  word-break: keep-all;
+  text-align: justify;
   margin: 5px 0 5px 0;
 `
 
