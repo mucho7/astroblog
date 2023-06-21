@@ -16,12 +16,15 @@ const MainPage = () => {
   const linkToGithub = () => {
     window.location.href = "https://github.com/kimsj-git"
   }
+  const linkToBlog = () => {
+    window.location.href = "https://velog.io/@kimsj"
+  }
 
   return (
     <Layout>
       <FlexContainerCol style={{minHeight: "70vh"}}>
         <FlexContainerRow style={{width: "60%"}}>
-          <FlexItem style={{margin: "0.5rem"}}>
+          <FlexItem style={{margin: "0.5rem", borderRadius: '50%', boxShadow: "5px 5px 5px 5px gainsboro"}}>
           <img src={profile_img} style={{height: '14rem', borderRadius: '50%'}}/>
           </FlexItem>
           <FlexContainerCol style={{margin: '0.5rem'}}>
@@ -29,61 +32,24 @@ const MainPage = () => {
             className="App-logo"
             src={shark}
             alt="shark"
-            style={{ margin: "1rem", height: '5rem' }}
+            style={{ margin: "1rem", height: '4rem' }}
           />
-            {/* <Typo>🐟 🐟 🐟</Typo> */}
-            <Typo>안녕하세요</Typo>
+            <Typo style={{fontSize: "1.3rem"}}>안녕하세요</Typo>
             <Typo>웹 개발자 김서정입니다.</Typo>
           </FlexContainerCol>
         </FlexContainerRow>
         <FlexContainerCol style={{ width: "80%", alignItems: 'start'}}>
           <TypoAboutMe style={{fontWeight: 'bold'}}>About Me</TypoAboutMe>
-          <TypoAboutMe>- 코드 실행 도중 에러를 마주하면? 배울게 하나 늘어서 오히려 좋아요.</TypoAboutMe>
-          <TypoAboutMe>- 이게 왜 안됨? 이건 왜 됨?? 실행되면 끝이 아니라 동작 원리를 알고싶어요.</TypoAboutMe>
-          <TypoAboutMe>- 이 기술을 써야하는 이유는? 아무리 좋은 기술 스택이라도 우리 프로젝트에 적용할땐 이유가 필요해요.</TypoAboutMe>
-          <TypoAboutMe>주니어 개발자로 아직 부족한 점이 많지만, 부족하다는 사실이 저를 불안하게 하지 않고 그만큼 배울 것이 많다고 생각되어 즐겁습니다. 이 즐거움이 제가 개발을 지속할 수 있는 원동력이라고 생각합니다.</TypoAboutMe>
+          <TypoAboutMe>💡 코드 실행 도중 에러를 마주하면? 배울게 하나 늘어서 오히려 좋아요.</TypoAboutMe>
+          <TypoAboutMe>💡 이게 왜 안됨? 이건 왜 됨?? 실행되면 끝이 아니라 동작 원리를 알고싶어요.</TypoAboutMe>
+          <TypoAboutMe>💡 이 기술을 써야하는 이유는? 아무리 좋은 기술 스택이라도 우리 프로젝트에 적용할땐 이유가 필요해요.</TypoAboutMe>
+          <TypoAboutMe>🚀 주니어 개발자로 아직 부족한 점이 많지만, 부족하다는 사실이 저를 불안하게 하지 않고 그만큼 배울 것이 많다고 생각되어 즐겁습니다. 이 즐거움이 제가 개발을 지속할 수 있는 원동력이라고 생각합니다.</TypoAboutMe>
         </FlexContainerCol>
         <FlexItem>
           <ColorButton onClick={linkToResume} bgColor="#61affe">Resume</ColorButton>
           <ColorButton onClick={linkToGithub} bgColor="#49cc90">Github</ColorButton>
+          <ColorButton onClick={linkToBlog} bgColor="#fca130">Blog</ColorButton>
         </FlexItem>
-        {/* <FlexItem>
-          <Typo>상어 밥 주는중...🐟</Typo>
-        </FlexItem>
-        <FlexItem>
-          <a
-            className="App-link"
-            href="https://github.com/kimsj-git/oracle-cloud-server"
-          >
-            <FlexContainerRow>
-              <Typo>Project Github</Typo>
-              <FiGithub style={{ fontSize: "2rem", marginLeft: "5px" }} />
-            </FlexContainerRow>
-          </a>
-        </FlexItem>
-        <FlexItem>
-          <Typo>
-            밥 주는 사람:{" "}
-            <a className="App-link" href="https://github.com/kimsj-git">
-              김서정
-              <FiGithub style={{ fontSize: "1.5rem", marginLeft: "5px" }} />
-            </a>
-          </Typo>
-        </FlexItem>
-        <FlexItem
-          style={{
-            backgroundColor: "#fafafa",
-            width: "100%",
-            boxShadow:
-              "0 1px 2px 0 rgba(0,0,0,.15), 0 -1px 2px 0 rgba(0,0,0,.15)",
-            padding: "2rem",
-          }}
-        >
-          <FlexContainerCol>
-            <SiFastapi size={50} color="#009485" />
-            <SendRequest />
-          </FlexContainerCol>
-        </FlexItem> */}
       </FlexContainerCol>
     </Layout>
   )
@@ -108,15 +74,17 @@ const FlexItem = styled.div`
 `
 
 const Typo = styled.p`
-  font-family: UhBeeBEOJJI;
+  font-family: Gowun Dodum;
   font-size: 1.5rem;
-  font-weight: bold;
+  // font-weight: bold;
+  word-break: keep-all;
+  text-align: center;
   margin: 0;
 `
 
 const TypoAboutMe = styled.p`
-  font-family: Pretendard-Regular;
-  font-size: 1rem;
+  font-family: Gowun Dodum;
+  font-size: 18px;
   margin: 5px 0 5px 0;
 `
 
