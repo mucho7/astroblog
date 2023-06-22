@@ -1,23 +1,21 @@
 import Layout from "../layout/Layout"
-import SendRequest from "../components/SendRequest"
 
 import shark from "../assets/shark.png"
 import profile_img from "../assets/profile_img.jpg"
 
 import styled from "styled-components"
-import { darken, lighten } from 'polished'
-import { FiGithub } from "react-icons/fi"
-import { SiFastapi } from "react-icons/si"
+import { darken } from 'polished'
 
 const MainPage = () => {
   const linkToResume = () => {
     window.location.href = "/resume.pdf"
+    // window.open("/resume.pdf")
   }
   const linkToGithub = () => {
-    window.location.href = "https://github.com/kimsj-git"
+    window.open("https://github.com/kimsj-git")
   }
   const linkToBlog = () => {
-    window.location.href = "https://velog.io/@kimsj"
+    window.open("https://velog.io/@kimsj")
   }
 
   return (
@@ -109,6 +107,5 @@ const ColorButton = styled.button`
   font-weight: bold;
 	font-family: UhBeeBEOJJI;
 `
-
 
 export default MainPage
