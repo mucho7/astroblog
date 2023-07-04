@@ -15,7 +15,7 @@ const MainPage = () => {
     window.open("https://github.com/kimsj-git")
   }
   const linkToBlog = () => {
-    window.open("https://velog.io/@kimsj")
+    window.open("https://babyshark.tistory.com/")
   }
 
   return (
