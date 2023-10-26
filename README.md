@@ -153,6 +153,7 @@ $ sudo apt-get install -y docker-compose
 - NPM custom location 설정하기
   - [How do i forward to a folder?](https://github.com/NginxProxyManager/nginx-proxy-manager/issues/104) 참고
   - NPM의 웹GUI에서 프록시 호스트를 설정하면 컨테이너 내부 `/data/nginx/proxy_host` 디렉토리에 conf 파일들이 프록시 서버별로 저장됨. 웹GUI에서 수정하면 자동으로 conf 파일이 수정됨.
+  - nginx log는 `/data/logs` 디렉토리에 프록시 호스트 별로 access.log, error.log 확인할 수 있음.
 - {도메인 이름}의 프록시 호스트를 frontimg 컨테이너의 포트로 연결시킴
 - Custom locations 탭에서 다음과 같이 설정
   - location: `/`, Scheme: `http`, Forward Hostname/IP: `frontimg` (frontend docker container 이름으로 설정), Forward Port: `3000` (frontend docker container 포트번호)
