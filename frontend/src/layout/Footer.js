@@ -8,6 +8,7 @@ const Footer = () => {
   return (
     <footer>
       <FooterContainer>
+        <HorizontalRule />
         <FlexContainerRow>
           <FlexIcon>
             <a href="https://github.com/kimsj-git">
@@ -20,28 +21,27 @@ const Footer = () => {
             </a>
           </FlexIcon>
         </FlexContainerRow>
-        <Typo>© 2023. Kim Suhjeong. All rights reserved.</Typo>
+        <Typo>© 2024. Kim Suhjeong. All rights reserved.</Typo>
       </FooterContainer>
     </footer>
   );
 };
 
 const GithubIcon = styled(GoMarkGithub)`
-  color: #eff0f0;
+  color: #6b728e;
   &:hover {
-    color: ${darken(0.1, "#eff0f0")};
+    color: ${darken(0.1, "#6B728E")};
   }
 `;
 
 const GmailIcon = styled(SiGmail)`
-  color: #eff0f0;
+  color: #6b728e;
   &:hover {
-    color: ${darken(0.1, "#eff0f0")};
+    color: ${darken(0.1, "#6B728E")};
   }
 `;
 
 const FooterContainer = styled.div`
-  background-color: #24292f;
   padding: 2rem;
   height: 5rem;
 
@@ -62,10 +62,15 @@ const FlexIcon = styled.div`
 `;
 
 const Typo = styled.p`
-  // font-family: UhBeeBEOJJI;
   font-size: 15px;
-  color: #eff0f0;
+  color: #6b728e;
   margin: 1rem;
+`;
+
+const HorizontalRule = styled(FlexContainerRow)`
+  border-top: 1px solid #6b728e;
+  width: 90%;
+  margin-bottom: 1rem;
 `;
 
 export default Footer;
