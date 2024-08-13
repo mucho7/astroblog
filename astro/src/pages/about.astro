@@ -1,35 +1,25 @@
 ---
-import Layout from '../layouts/Base.astro';
+import Layout from "../layouts/Base.astro";
 ---
 
 <Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	image="/blog-placeholder-about.jpg"
+  title="About Me"
+  description="Lorem ipsum dolor sit amet"
+  image="/blog-placeholder-about.jpg"
 >
-	<h1 class="title">About</h1>
-	<p>
-		Hi, I'm a Astro theme. I'm particularly great for starting a blog or a 
-		portfolio. 
-		<div>
-			I was based on two other themes:
-			<a 
-				class="cody-link" 
-				href="https://astro-theme-cactus.netlify.app"
-				target="_blank"
-				rel="noopener noreferrer"
-			>Astro Cactus</a>
-			and
-			<a 
-				class="cody-link" 
-				target="_blank"
-				rel="noopener noreferrer"
-				href="https://risotto.joeroe.io"
-			>Risotto</a>.
-		</div>
-	</p>
+  <h1 class="title">About..</h1>
+  <div>
+    <p>삶은 짧다고 생각해서 재밌는 일 위주로 하고자 노력합니다.</p>
+    <p>지금은 개발이 제일 재밌는 것 같아요.</p>
+  </div>
 
-	<h2 class="title mt-4">Here are my built-in features:</h2>
+  <h2 class="title mt-4">Currently interested in..</h2>
+  <ul class="list-inside list-disc">
+    <li>Kotlin, Spring Boot, Spring Batch</li>
+    <li>JPA, MySQL, Oracle</li>
+  </ul>
+
+  <!-- <h2 class="title mt-4">Here are my built-in features:</h2>
 	<ul class="list-inside list-disc">
 		<li>Looks great on any device</li>
 		<li>Fully Responsive</li>
@@ -50,6 +40,5 @@ import Layout from '../layouts/Base.astro';
 			repo
 		</a>
 		if you like me!
-	</p>
+	</p> -->
 </Layout>
-
