@@ -6,7 +6,8 @@ COPY . .
 RUN npm run build
 
 FROM nginx:alpine AS runtime
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+RUN rm -rf /etc/nginx/conf.d
+COPY conf /etc/nginx
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 3000
 CMD ["nginx", "-g", "daemon off;"]
