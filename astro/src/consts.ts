@@ -68,12 +68,12 @@ export const NAV_LINKS: Array<{ title: string, path: string }> = [
     title: "Blog",
     path: "/blog",
   },
-  {
-    title: "Projects",
-    path: '/projects'
-  },
-  {
-    title: "Archive",
-    path: '/archive'
-  }
+  // {
+  //   title: "Projects",
+  //   path: '/projects'
+  // },
+  // {
+  //   title: "Archive",
+  //   path: '/archive'
+  // }
 ];
