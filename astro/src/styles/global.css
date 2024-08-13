@@ -8,11 +8,11 @@
     /* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
     --theme-bg: #efefef;
     --theme-text: #222222;
-    --theme-accent: #dd7878;
+    --theme-accent: #7F52FF;
     --theme-accent-2: #bcc0cd;
     --theme-surface: #e6e6e6;
-    --theme-quote: #dd7878;
-    --theme-highlight: #dd7878;
+    --theme-quote: #7F52FF;
+    --theme-highlight: #7F52FF;
   }
 
   :root.dark {
